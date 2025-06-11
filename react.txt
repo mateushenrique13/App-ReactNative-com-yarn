@@ -1,0 +1,197 @@
+************ REACT-NATIVE *********************************
+
+
+Criação de Projeto React-Native
+
+Node.js - Ambiente de Execução Javascript
+Javascript - Linguagem de Programação
+React-Native - Framework Javascript para Aplicações Mobile
+React - Framework Javascript para Aplicações Web
+Framework - Estrutura 
+
+Instalação do Node
+	https://nodejs.org/en/download/
+
+Abrir o Node.js Command Prompt
+	cd..	(Comando para sair da pasta)
+	cd	(Comando para entrar na pasta)
+
+Versão do Node 
+	node -v
+
+npm - Node Package Management - Gerenciador de Pacotes do Node
+yarn -> Gerenciador de Pacotes do Node (Facebook)
+
+Instalação do npm
+	npm install -g npm
+
+Verificação da versão do npm
+	npm -v
+
+Instalação do yarn
+	npm install --global yarn
+
+---------------------------
+
+Criação de Projeto React-Native
+
+- Abra o Node Js Command Prompt e defina um local para o projeto
+
+
+1. Criação do Projeto - Pode ser usado npm ou yarn 
+Com npm 
+
+	-> (via node js command prompt)  npx create-expo-app nome_projeto
+OBS: O npx já baixo o Expo para o projeto
+	Exemplo:
+	-> (via node js command prompt) npx create-expo-app app1-pam2
+
+Com yarn
+	-> yarn (via node js command prompt) yarn create expo-app nome-do-app
+OBS: O yarn já baixo o Expo para o projeto
+	Exemplo:
+	-> (via node js command prompt) yarn create expo-app app1-pam2
+
+*****
+OBS #1: Se exibir a mensagem abaixo:
+
+Need to install the following packages:
+create-expo-app@3.3.0
+Ok to proceed? (y)
+
+	--> Para configurar a operação aperter a tecla "y"
+
+O que significa isso: 
+
+ - O npx tenta usar o pacote "create-expo-app" para criar um novo projeto Expo (React Native).
+ - Mas esse pacote não está instalado ainda na sua máquina, então o terminal te pergunta se pode instalar a versão 3.3.0 dele.
+ - Quando ele diz Ok to proceed? (y), ele quer saber se pode continuar a instalação.
+****
+****
+OBS #2 - "npm WARN deprecated" --> significa:
+"Aviso: este pacote está obsoleto (deprecated)"
+
+ - Está informando que certas bibliotecas devem ser evitadas no futuro, mas ainda funcionam
+****
+
+----------------
+
+2. Acessar o Projeto via Node Js Command Prompt
+
+	--> cd "nome-do-projeto"
+
+Exemplo
+
+	(via node js command prompt) C:\React-Native>cd app1-pam2
+
+	Resultado -> C:\React-Native\app1-pam2>
+
+----------------
+OBS: Não execute o projeto antes de executar a instalação abaixo
+
+3. Pra utilizar menos arquivos
+Com npm
+	-> (via node js command prompt) npm run reset-project
+
+Com yarn
+Se no package.json tiver:
+
+	"scripts": {
+  		"reset-project": "expo start --clear"
+	}
+	
+Execute>
+	-> (via node js command prompt) yarn reset-project
+
+Aperte "Y" para confirmar a operação se exibir a mensagem abaixo:
+	Do you want to move existing files to /app-example instead of deleting them? (Y/n): Y
+
+Se o reset-project ainda não estiver no package.json, adicione em "scripts":
+
+	"scripts": {
+  	"reset-project": "expo start --clear",
+  	"start": "expo start",
+  	"android": "expo run:android",
+  	"ios": "expo run:ios",
+  	"web": "expo start --web"
+	}
+
+----------------
+
+4. Abra o Projeto no Visual Studio Code
+
+ - (VSC) --> FILE -> ADD FOLDER TO WORKSPACE
+
+ - Acesse do diretório "app" do projeto e "RENOMEIE" os arquivo "_layout.tsx" e "index.tsx" para "_layout.js" e "index.js"
+
+"_layout.tsx" => "_layout.js"
+"index.tsx"  => "index.js" 
+
+---------------
+
+5. Executar o Projeto
+	-> (via node js command prompt) npx expo start
+
+Para visualização do navegador pressione W
+
+Para visualização no app EXPO leia o QRCODE
+
+----------------
+6. Comandos via Node Js Command Prompt
+
+#1 - Parar a aplicação 
+
+	(Via Node Js Command Prompt) -> Aperte "Ctrl + C"
+
+#2 - Voltar comandos executados no Node
+
+	setas do teclado pra "cima" e pra "baixo"
+
+
+
+-------------------------------
+Ao criar o projeto, ele vem com muitos arquivos.
+
+ARQUIVO INICIAL - app.js
+
+O arquivo app.js é divido em 3 parates
+	1. Imports
+	2. Função App
+	3. Estilização
+
+A ESTRUTURA DO PROJETO É BASEADA EM COMPONENTES
+
+//Imports
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    color: '#f00'
+  }
+});
+
+
+-------------------------------------------------------------------
+
+
+LINK PESQUISA
+
+
+
+https://forms.office.com/Pages/ResponsePage.aspx?id=bEY47UG2fUOa6dgBuCn6lHEi8vlhrExHki6GBXuTCEdUMTFSTExYTEkxOEVRRjhNM0RNNzRYREQ4Ry4u
