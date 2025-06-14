@@ -315,9 +315,9 @@ O código acima é um exemplo de como usar o Flexbox no React Native para criar 
 // AULA 9 - Array de Objetos e map
 
 // const names = [
-//   { name: "et==", age: 25 },
+//   { name: "Socaares", age: 25 },
 //   { name: "Amoebinha", age: 20 },
-//   { name: "AMOGUS", age: 30 },
+//   { name: "Lucas", age: 30 },
 // ];
 
 // import { Text, View } from "react-native";
@@ -338,10 +338,7 @@ O código acima é um exemplo de como usar o Flexbox no React Native para criar 
 //   );
 // }
 
-
-
-// AULA 10 USESTATE (de novo...) --------------------------------------------
-
+// AULA 10 - Adicionando e removendo itens de um array
 // import { ScrollView, Text, View, Button } from "react-native";
 // import styles from "./styles"; // Importando o arquivo de estilos
 // import { useState } from "react";
@@ -381,8 +378,6 @@ O código acima é um exemplo de como usar o Flexbox no React Native para criar 
 //   );
 // }
 
-
-
 // AULA 11 - usestate com input
 import { useState } from "react";
 import { Text, View, TextInput, Button } from "react-native";
@@ -395,16 +390,18 @@ export default function Index() {
 
   const obj = {
     id: 1,
-    name: "Mateus",
+    name: "Joao",
   };
 
   const array = [
-    { id: 1, name: "Maluco beleza" },
-    { id: 2, name: "frigo camelo" },
-    { id: 3, name: "JPSnow" },
+    { id: 1, name: "Socaares" },
+    { id: 2, name: "Amoebinha" },
+    { id: 3, name: "Cavalca" },
   ];
   const addName = () => {
     if (newName.trim() !== "") {
+      //elimina espaços em branco
+      // Verifica se o campo de entrada não está vazio
       setName([...name, { id: name.length + 1, name: newName }]);
       setNewName(""); // Limpa o campo de entrada após adicionar
     }
